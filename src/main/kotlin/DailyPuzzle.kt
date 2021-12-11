@@ -24,4 +24,6 @@ abstract class DailyPuzzle(val day: Int) {
             yield (group)
         }
     }.toList()
+
+    fun readToks() = readGroup().flatMap { it.split(" ") }
 }
