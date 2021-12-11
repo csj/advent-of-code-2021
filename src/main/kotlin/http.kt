@@ -11,7 +11,7 @@ import java.util.*
 
 suspend fun getInputForDay(day: Int): String {
     val client = HttpClient(CIO) {
-        install(Logging)
+//        install(Logging)
     }
 
     val props = Properties()
@@ -25,6 +25,7 @@ suspend fun getInputForDay(day: Int): String {
                 append(HttpHeaders.Cookie, "session=${sessionId}")
             }
         }
-    println(response.receive() as String)
+    val data = response.receive() as String
     client.close()
+    return data
 }
