@@ -3,9 +3,9 @@ package puzzles
 import DailyPuzzle
 import run
 
-suspend fun main() = Day3().run()
+suspend fun main() = Day03().run()
 
-class Day3: DailyPuzzle(3) {
+class Day03: DailyPuzzle(3) {
     override fun solvePart1(): String {
         val grid = readGroup()
         val gammaDigits = List(grid[0].length) { j ->

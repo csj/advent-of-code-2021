@@ -3,9 +3,9 @@ package puzzles
 import DailyPuzzle
 import run
 
-suspend fun main() = Day1().run()
+suspend fun main() = Day01().run()
 
-class Day1 : DailyPuzzle(1) {
+class Day01 : DailyPuzzle(1) {
     override fun solvePart1(): String {
         val lines = readGroup().map { it.toInt() }
         return lines.windowed(2).count { it[1] > it[0] }.toString()

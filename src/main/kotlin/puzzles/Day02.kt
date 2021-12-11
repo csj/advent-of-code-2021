@@ -3,9 +3,9 @@ package puzzles
 import DailyPuzzle
 import run
 
-suspend fun main() = Day2().run()
+suspend fun main() = Day02().run()
 
-class Day2 : DailyPuzzle(2) {
+class Day02 : DailyPuzzle(2) {
     override fun solvePart1(): String {
         var depth = 0
         var horz = 0
