@@ -1,10 +1,10 @@
 package puzzles
 
 import DailyPuzzle
-import play
+import run
 import kotlin.math.sign
 
-suspend fun main() = Day5().play()
+suspend fun main() = Day5().run()
 
 class Day5 : DailyPuzzle(5) {
     fun solve(ignoreDiagonals: Boolean): String {

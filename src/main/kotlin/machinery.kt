@@ -1,6 +1,6 @@
 import java.util.*
 
-suspend fun DailyPuzzle.play() {
+suspend fun DailyPuzzle.run() {
     val actualInput = getInputForDay(this.day)
     println("-- DAY ${this.day} --")
 

@@ -1,9 +1,9 @@
 package puzzles
 
 import DailyPuzzle
-import play
+import run
 
-suspend fun main() = Day2().play()
+suspend fun main() = Day2().run()
 
 class Day2 : DailyPuzzle(2) {
     override fun solvePart1(): String {

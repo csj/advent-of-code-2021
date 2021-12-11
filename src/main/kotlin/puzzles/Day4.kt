@@ -1,9 +1,9 @@
 package puzzles
 
 import DailyPuzzle
-import play
+import run
 
-suspend fun main() = Day4().play()
+suspend fun main() = Day4().run()
 
 class Day4: DailyPuzzle(4) {
     data class BoardResult(val moves: Int, val score: Int)
