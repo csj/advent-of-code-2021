@@ -1,4 +1,4 @@
-#Day 4: Giant Squid (a.k.a. Bingo Simulator)
+# Day 4: Giant Squid (a.k.a. Bingo Simulator)
 [My solution](../src/main/kotlin/puzzles/Day04.kt)
 
 ## Part 1

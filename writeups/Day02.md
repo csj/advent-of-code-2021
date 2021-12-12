@@ -1,4 +1,4 @@
-#Day 2: Dive!
+# Day 2: Dive!
 [My Solution](../src/main/kotlin/puzzles/Day02.kt)
 
 There isn't much clever to say about this one -- just ... do what it says.

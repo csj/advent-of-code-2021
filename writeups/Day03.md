@@ -1,7 +1,7 @@
-#Day 3: Binary diagnostic
+# Day 3: Binary diagnostic
 [My solution](../src/main/kotlin/puzzles/Day03.kt)
 
-##Part 1
+## Part 1
 This puzzle is as much an exercise in juggling new abstract concepts as it is following a procedure. Here we get introduced to some new terms we've never heard of: the **power consumption**, the **gamma rate** and the **epsilon rate**. The procedure itself is quite straightforward, and again there are a few approaches. It could be done in a loop, where the gamma rate is built up digit by digit (perhaps multiplying some accumulator by 2 at each step). 
 
 I chose I would say a more functional approach. First find out what the digits in the gamma rate are, then combine them to form a number.
@@ -20,7 +20,7 @@ Compiling the actual gamma rate is a one liner in Kotlin: `gammaDigits.joinToStr
 
 The epsilon rate can be discovered a similar way, but we notice that its bits should simply be inverses of the bits in the gamma rate, and so they should sum to something suspiciously clean. Examining the example input, we find 22 (10110) and 9 (01001). Their sum would be 31 (11111) -- or one less than the 5th power of 2. We can use this to calculate the epsilon rate from the gamma rate directly: `val epsilon = (1 shl grid[0].length) - 1 - gamma` 
 
-##Part 2
+## Part 2
 This problem gives us a real challenge at keeping [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), but we're going to give it a shot.
 
 The main thing we want to avoid is expressing the procedure for paring down the list of items twice. Yes, the procedure for calculating the O<sub>2</sub> rating uses a different method for determining if an element in the list survives than the procedure for calculating the CO<sub>2</sub> rating, but perhaps the survival criteria can be injected into a single procedure.
