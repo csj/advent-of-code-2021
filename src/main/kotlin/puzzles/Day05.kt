@@ -29,8 +29,8 @@ class Day5 : DailyPuzzle(5) {
         return grid.flatten().count { it > 1 }.toString()
     }
 
-    override fun solvePart1() = solve(true)
-    override fun solvePart2() = solve(false)
+    override fun solvePart1() = solve(ignoreDiagonals = true)
+    override fun solvePart2() = solve(ignoreDiagonals = false)
 
     override val sampleInput = """0,9 -> 5,9
 8,0 -> 0,8
