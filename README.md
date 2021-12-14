@@ -6,3 +6,4 @@ I look forward to the Advent of Code contest every year. Not because I am compet
 I came across a [blog post](https://blog.jetbrains.com/kotlin/2021/11/advent-of-code-2021-in-kotlin/) by JetBrains suggesting they were encouraging the use of Kotlin, so I was in. I took a quick look at the project template they had, decided to build my own infrastructure instead, and off we went.
 
 I'll be doing little write-ups about each solution as I do them; they are listed [here](./writeups). Enjoy!
+<!--- advent_readme_stars table --->
