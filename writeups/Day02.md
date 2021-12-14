@@ -1,5 +1,5 @@
 # Day 2: Dive!
-[My Solution](../src/main/kotlin/puzzles/Day02.kt)
+[<< Previous](Day01.md) | [Problem Statement](https://adventofcode.com/2021/day/2) | [My solution](../src/main/kotlin/puzzles/Day02.kt) | [Next >>](Day03.md)
 
 There isn't much clever to say about this one -- just ... do what it says.
 

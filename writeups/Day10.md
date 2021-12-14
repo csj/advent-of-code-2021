@@ -1,5 +1,5 @@
 # Day 10: Syntax scoring
-[My solution](../src/main/kotlin/puzzles/Day10.kt)
+[<< Previous](Day09.md) | [Problem Statement](https://adventofcode.com/2021/day/10) | [My solution](../src/main/kotlin/puzzles/Day10.kt) | [Next >>](Day11.md)
 
 I found a cheeky way to solve both parts with a single function; read on :)
 

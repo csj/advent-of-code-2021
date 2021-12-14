@@ -1,5 +1,5 @@
 # Day 11: Dumbo Octopus
-[My solution](../src/main/kotlin/puzzles/Day11.kt)
+[<< Previous](Day10.md) | [Problem Statement](https://adventofcode.com/2021/day/11) | [My solution](../src/main/kotlin/puzzles/Day11.kt) | [Next >>](Day12.md)
 
 ## Part 1
 Not much to say about this problem: just increment all the elements of the grid every day, and watch for overflows. Spread the wealth and repeat until there are no flashes seen. Count em up and spit em out.

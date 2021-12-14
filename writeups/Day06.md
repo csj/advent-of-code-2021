@@ -1,6 +1,6 @@
 # Day 6: Lanternfish
 
-[My solution](../src/main/kotlin/puzzles/Day06.kt)
+[<< Previous](Day05.md) | [Problem Statement](https://adventofcode.com/2021/day/6) | [My solution](../src/main/kotlin/puzzles/Day06.kt) | [Next >>](Day07.md)
 
 Oof, the problem statement's author has wasted no time throwing the word "**exponentially**" in our faces. DANGER. WARNING.
 

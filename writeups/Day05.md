@@ -1,5 +1,5 @@
 # Day 5: Hydrothermal venture
-[My solution](../src/main/kotlin/puzzles/Day05.kt)
+[<< Previous](Day04.md) | [Problem Statement](https://adventofcode.com/2021/day/5) | [My solution](../src/main/kotlin/puzzles/Day05.kt) | [Next >>](Day06.md)
 
 Aha! Regular expressions! I knew it.
 

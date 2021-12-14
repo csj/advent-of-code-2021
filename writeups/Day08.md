@@ -1,5 +1,5 @@
 # Day 8: Seven Segment Search
-[My solution](../src/main/kotlin/puzzles/Day08.kt)
+[<< Previous](Day07.md) | [Problem Statement](https://adventofcode.com/2021/day/8) | [My solution](../src/main/kotlin/puzzles/Day08.kt) | [Next >>](Day09.md)
 
 Woah, this looks complicated.
 

@@ -1,5 +1,5 @@
 # Day 3: Binary diagnostic
-[My solution](../src/main/kotlin/puzzles/Day03.kt)
+[<< Previous](Day02.md) | [Problem Statement](https://adventofcode.com/2021/day/3) | [My solution](../src/main/kotlin/puzzles/Day03.kt) | [Next >>](Day04.md)
 
 ## Part 1
 This puzzle is as much an exercise in juggling new abstract concepts as it is following a procedure. Here we get introduced to some new terms we've never heard of: the **power consumption**, the **gamma rate** and the **epsilon rate**. The procedure itself is quite straightforward, and again there are a few approaches. It could be done in a loop, where the gamma rate is built up digit by digit (perhaps multiplying some accumulator by 2 at each step). 

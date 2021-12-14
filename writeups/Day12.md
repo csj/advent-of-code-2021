@@ -1,5 +1,5 @@
 # Day 12: Passage pathing
-[My solution](../src/main/kotlin/puzzles/Day12.kt)
+[<< Previous](Day11.md) | [Problem Statement](https://adventofcode.com/2021/day/12) | [My solution](../src/main/kotlin/puzzles/Day12.kt) | [Next >>](Day13.md)
 
 This problem subjected me to substantially subtle bugs -- my performance here was sub-par. Using mutable state variables and a recursive function, I was able to complete part 1, but part 2 got me into a mess.
 

@@ -1,5 +1,5 @@
 # Day 7: The Treachery of Whales (a.k.a. Prismatic Alignment simulator)
-[My solution](../src/main/kotlin/puzzles/Day07.kt)
+[<< Previous](Day06.md) | [Problem Statement](https://adventofcode.com/2021/day/7) | [My solution](../src/main/kotlin/puzzles/Day07.kt) | [Next >>](Day08.md)
 
 ## Part 1
 A little thought suggests that the solution *must* involve arranging all the crabs in order, then finding the median. We're looking for a position that, were we to move it one position to the right, would increase the cost (because of the crabs on the left) by the same amount as it would decrease the cost (because of the crabs on the right). Then we realize that it's complicated by the fact that crabs can share the same position, as in the sample input, so we abandon this line of thinking.

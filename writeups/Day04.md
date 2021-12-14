@@ -1,5 +1,5 @@
 # Day 4: Giant Squid (a.k.a. Bingo Simulator)
-[My solution](../src/main/kotlin/puzzles/Day04.kt)
+[<< Previous](Day03.md) | [Problem Statement](https://adventofcode.com/2021/day/4) | [My solution](../src/main/kotlin/puzzles/Day04.kt) | [Next >>](Day05.md)
 
 ## Part 1
 Not much to say about this one: play bingo, detect winning combinations. One little gotcha: the spacing is a bit awkward in the input, so if you're not careful you'll be reading empty tokens.

@@ -1,5 +1,5 @@
 # Day 1: Sonar Sweep
-[My Solution](../src/main/kotlin/puzzles/Day01.kt)
+[<< Previous](.) | [Problem Statement](https://adventofcode.com/2021/day/1) | [My Solution](../src/main/kotlin/puzzles/Day01.kt) | [Next >>](Day02.md)
 
 A very straightforward problem, designed to whet the appetite and get us familiar with the contest environment.
 

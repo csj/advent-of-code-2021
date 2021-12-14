@@ -1,5 +1,5 @@
 # Day 9: Smoke Basin (also, [this guy](https://twitter.com/day9tv))
-[My solution](../src/main/kotlin/puzzles/Day09.kt)
+[<< Previous](Day08.md) | [Problem Statement](https://adventofcode.com/2021/day/9) | [My solution](../src/main/kotlin/puzzles/Day09.kt) | [Next >>](Day10.md)
 
 ## Part 1
 Pretty straightforward, just scan the lines in and look for characters that are lower than all their neighbours. Accounting for boundaries is the only really tricky part. There are two main approaches: (1) use a bunch of `if` conditions to guard against boundary cases (my approach), (2) simply pad the whole grid with walls, then run your search on the inner grid.

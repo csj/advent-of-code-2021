@@ -1,6 +1,5 @@
 # Day 13: Transparent Origami
-[My solution](../src/main/kotlin/puzzles/Day13.kt)
-
+[<< Previous](Day12.md) | [Problem Statement](https://adventofcode.com/2021/day/13) | [My solution](../src/main/kotlin/puzzles/Day13.kt) | [Next >>](Day14.md)
 ## Part 1
 Pretty straight-forward simulation. Make a 2-D array of booleans, fold the paper, add dots to the first half of the paper, remove dots from the second half. Finding the right indices to update was a bit of a tricky situation, but if we take the example of "fold along x=10", we realize that indices 20...11 should map onto indices 0...9, so that's just double the fold line position and subtract the index: 
 
