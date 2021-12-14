@@ -9,3 +9,5 @@ for (x in 0 until foldX) grid[y][x] = grid[y][x] || grid[y][2*foldX - x]
 
 ## Part 2
 Another case of the same only different. This time play out all the folds instead of just the first one. I enjoyed the surprise twist: it made me glad I didn't auto-submit answers in my code! :boom:
+
+(Edit) With the benefit of *sleep*, I thought of a better approach. Rather than updating a *giant* grid with true/false values, it's probably far better to process a list of dots, and work out where those dots will appear after a fold. Ah well, *c'est la vie.*
