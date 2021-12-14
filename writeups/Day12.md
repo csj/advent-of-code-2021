@@ -16,7 +16,7 @@ This double-visiting business gave me a real headache. Now it was necessary to k
 
 I re-wrote my core `search` function to take a few parameters: the cave we're currently visiting, a flag indicating if a revisit is still available, and a list of caves we've already seen. Again if the cave we're currently visiting is called "end", we immediately return 1. Otherwise:
 - For each connection (that is not "start", and is not a lower-case cave we've seen before if no revisit is available),
-- Take the sum of visiting each of these connections, making sure to set the revisit flag correctly (i.e. if we are in fact revisiting a small cave, set this to `true`)
+- Take the sum of visiting each of these connections, making sure to set the revisit flag correctly (i.e. if we are in fact revisiting a small cave, set this to `false`)
 
 The revised core `search` function:
 ```kotlin
