@@ -31,10 +31,7 @@ class Day11 : DailyPuzzle(11) {
 
     override fun solvePart1(): String {
         val grid = readGroup().map { it.map { it.digitToInt() }.toIntArray() }
-        var flashes = 0L
-
-        repeat(100) { flashes += updateGrid(grid) }
-        return flashes.toString()
+        return (0 until 100).sumOf { updateGrid(grid) }.toString()
     }
 
     override fun solvePart2(): String {

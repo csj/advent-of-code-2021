@@ -23,8 +23,9 @@ class Day10: DailyPuzzle(10) {
         } }
     }
     private fun Long.negate() = -this
-    private fun List<Long>.median() = sorted().let { it[it.size / 2] }
     override fun solvePart1() = readGroup().map { solve(it) }.filter { it < 0 }.sum().negate().toString()
+
+    private fun List<Long>.median() = sorted().let { it[it.size / 2] }
     override fun solvePart2() = readGroup().map { solve(it) }.filter { it > 0 }.median().toString()
 
     override val sampleInput = """[({(<(())[]>[[{[]{<()<>>
