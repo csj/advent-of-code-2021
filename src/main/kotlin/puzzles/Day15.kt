@@ -30,15 +30,11 @@ class Day15: DailyPuzzle(15) {
             while (queue.isNotEmpty()) {
                 val current = queue.minByOrNull { distances[it]!! }!!
                 queue.remove(current)
-                if (current == end) {
-                    return distances[current]!!
-                }
+                if (current == end) return distances[current]!!
                 visited.add(current)
                 val neighbors = current.neighbors()
                 for (neighbor in neighbors) {
-                    if (visited.contains(neighbor)) {
-                        continue
-                    }
+                    if (visited.contains(neighbor)) continue
                     val distance = distances[current]!! + cell(neighbor.first,neighbor.second)
                     if (distance < (distances[neighbor] ?: Int.MAX_VALUE)) {
                         distances[neighbor] = distance
