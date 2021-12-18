@@ -11,4 +11,5 @@ Eh, what's that, your CPU didn't catch fire on part 1? Well, good news, the grid
 
 Pro tip: don't actually build the larger grid. Instead, use a function to determine the effective value of a cell at a given location. Here's mine (where the original grid was `nn` x `mm`):
 ```kotlin
-fun cell(i: Int, j: Int) = (grid[i%nn][j%mm] + (i/nn) + (j/mm) - 1) % 9 + 1```
+fun cell(i: Int, j: Int) = (grid[i%nn][j%mm] + (i/nn) + (j/mm) - 1) % 9 + 1
+```
