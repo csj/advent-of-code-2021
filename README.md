@@ -34,4 +34,6 @@ I'll be doing little write-ups about each solution as I do them; they are listed
 | [Day 21](https://adventofcode.com/2021/day/21) | ⭐ | ⭐ |
 | [Day 22](https://adventofcode.com/2021/day/22) | ⭐ | ⭐ |
 | [Day 23](https://adventofcode.com/2021/day/23) | ⭐ | ⭐ |
+| [Day 24](https://adventofcode.com/2021/day/24) | ⭐ | ⭐ |
+| [Day 25](https://adventofcode.com/2021/day/25) | ⭐ | ⭐ |
 <!--- advent_readme_stars table --->
