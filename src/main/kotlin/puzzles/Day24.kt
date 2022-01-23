@@ -2,7 +2,6 @@ package puzzles
 
 import DailyPuzzle
 import run
-import kotlin.math.abs
 
 suspend fun main() = Day24().run()
 
@@ -84,6 +83,7 @@ class Day24: DailyPuzzle(24) {
                 "/" -> {
                     if (left is ValueNode && left.value == 0) return ValueNode(0)
                     if (right is ValueNode && right.value == 1) return left
+                    if (right is ValueNode && left.range.last <= right.value) return ValueNode(0)
                     if (left is ValueNode && right is ValueNode) return ValueNode(left.value / right.value)
                     if (left is OpNode && left.op == "+" && right is ValueNode) {
                         if (left.left is OpNode && left.left.op == "*" && left.left.right is ValueNode
@@ -123,9 +123,11 @@ class Day24: DailyPuzzle(24) {
         }
     }
 
-    override fun solvePart1(): String {
-        val registers = List(4) { ValueNode(0) }.toMutableList()
-        var nextVariable = 'a'
+    class World(
+        val registers: MutableList<Node> = List(4) { ValueNode(0) }.toMutableList(),
+        val conditions: List<String> = emptyList(),
+        var nextVariable: Char = 'a'
+    ) {
         fun parseTok2(tok2: String): Node {
             return when (tok2) {
                 "w" -> registers[0]
@@ -135,26 +137,73 @@ class Day24: DailyPuzzle(24) {
                 else -> ValueNode(tok2.toInt())
             }
         }
-        for (line in readGroup()) {
-            println()
-            println(line)
-            val toks = line.split(" ")
-            val regIndex = toks[1][0] - 'w'
 
+        fun process(toks: List<String>): List<World> {
+            val regIndex = toks[1][0] - 'w'
             when (toks[0]) {
                 "inp" -> registers[regIndex] = VariableNode(nextVariable++)
                 "add" -> registers[regIndex] = OpNode("+", registers[regIndex], parseTok2(toks[2])).simplifyFully()
                 "mul" -> registers[regIndex] = OpNode("*", registers[regIndex], parseTok2(toks[2])).simplifyFully()
                 "div" -> registers[regIndex] = OpNode("/", registers[regIndex], parseTok2(toks[2])).simplifyFully()
                 "mod" -> registers[regIndex] = OpNode("%", registers[regIndex], parseTok2(toks[2])).simplifyFully()
-                "eql" -> registers[regIndex] = OpNode("==", registers[regIndex], parseTok2(toks[2])).simplifyFully()
+                "eql" -> {
+                    val left = registers[regIndex]
+                    val right = parseTok2(toks[2])
+
+                    // distinguish between *always true*, *always false*, and *maybe true*
+                    if (left.range.last < right.range.first || right.range.last < left.range.first) {
+                        // always false
+                        registers[regIndex] = ValueNode(0)
+                    } else if (left.range.first == left.range.last && right.range.first == right.range.last &&
+                            left.range.first == right.range.first) {
+                        // always true
+                        registers[regIndex] = ValueNode(1)
+                    } else {
+                        // split reality! omg
+                        return mutableListOf(
+                            World(registers.toMutableList(), conditions + "$left == $right", nextVariable)
+                                .also { it.registers[regIndex] = ValueNode(1) },
+                            World(registers.toMutableList(), conditions + "$left != $right", nextVariable)
+                                .also { it.registers[regIndex] = ValueNode(0) }
+                        )
+                    }
+                }
             }
+
+            return listOf(this)
+        }
+
+        fun printIt() {
+            if (conditions.any()) println("when " + conditions.joinToString(", ") + ":")
             for (i in registers.indices) {
                 println("${'w' + i} = ${registers[i]}")
             }
-            readLine()
-
         }
+
+        fun printSmall() {
+            println("z = ${registers[3]} when ${conditions.joinToString(", ")}")
+        }
+    }
+
+    override fun solvePart1(): String {
+        var worlds = listOf(World())
+
+        for (line in readGroup()) {
+            println()
+            println(line)
+            val toks = line.split(" ")
+            worlds = worlds.flatMap { it.process(toks) }
+//            worlds.forEach { it.printIt() }
+
+//            readLine()
+        }
+        println("There are ${worlds.size} worlds")
+        worlds
+            .filter {
+                val z = it.registers[3]
+                if (z is ValueNode) z.value == 0 else false
+            }
+            .forEach { it.printSmall() }
         return ""
     }
     override val samples = listOf<Sample>()
